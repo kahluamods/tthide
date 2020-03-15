@@ -1,0 +1,11 @@
+## Interface: 11304
+## Title: Tooltip Hide
+## Notes: Hide tooltips during combat
+## Author: Cruciformer
+## Version: 1
+## X-email: me@cruciformer.com
+## X-Category: Utility
+## X-License: Apache
+## SavedVariablesPerCharacter: TTHideEnabled
+
+TTHide.lua
