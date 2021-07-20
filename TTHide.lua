@@ -39,7 +39,7 @@ local function tthide_cmd(input)
   enable_disable(TTHideEnabled)
 end
 
--- Should only happen firt time around so we want it enabled
+-- Should only happen first time around so we want it enabled
 if (TTHideEnabled == nil) then
   TTHideEnabled = true
 end
@@ -48,3 +48,12 @@ enable_disable(TTHideEnabled)
 SlashCmdList["TTHIDE"] = tthide_cmd
 _G["SLASH_TTHIDE1"] = "/tthide"
 GameTooltip:HookScript("OnShow", no_combat_onshow)
+
+local eframe = CreateFrame("Frame", "TTHideEvents")
+eframe:UnregisterAllEvents()
+eframe:SetScript("OnEvent", function(this, evt)
+  if (TTHideEnabled and evt == "PLAYER_REGEN_DISABLED") then
+    GameTooltip:Hide()
+  end
+end)
+eframe:RegisterEvent("PLAYER_REGEN_DISABLED")

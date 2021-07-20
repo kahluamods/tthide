@@ -2,7 +2,7 @@
 ## Title: Tooltip Hide
 ## Notes: Hide tooltips during combat
 ## Author: Cruciformer
-## Version: 1
+## Version: 2
 ## X-email: me@cruciformer.com
 ## X-Category: Utility
 ## X-License: Apache
